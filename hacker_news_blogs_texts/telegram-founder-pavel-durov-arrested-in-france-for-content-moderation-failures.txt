@@ -1,0 +1,22 @@
+Title: Telegram Founder Pavel Durov Arrested in France for Content Moderation Failures
+Date: No date found
+URL: https://thehackernews.com/2024/08/telegram-founder-pavel-durov-arrested.html
+
+Content:
+Pavel Durov, founder and chief executive of the popular messaging app Telegram, was arrested in France on Saturday, according to French television network TF1.
+Durov is believed to have been apprehended pursuant to a warrant issued in connection with a preliminary police investigation.
+TF1 said the probe was focused on a lack of content moderation on the instant messaging service, which the authorities took issue with, turning the app into a haven for various kinds of criminal activity, including drug trafficking, child pornography, money laundering, and fraud.
+
+The hands-off approach to moderation on Telegram has been a point of contention, fueling cybercrime and turning the platform into a hub for threat actors to organize their operations, distribute malware, and peddle stolen data and other illegal goods 
+"This messaging app has transformed into a bustling hub where seasoned cybercriminals and newcomers alike exchange illicit tools and insights creating a dark and well-oiled supply chain of tools and victims' data," Guardio Labs said in a report earlier this year.
+Headquartered in Dubai, Telegram has over 950 million monthly active users as of July 2024. It recently launched an in-app browser and a Mini App Store, effectively turning it into a super app, mirroring Tencent's WeChat.
+In a statement shared on X, Telegram said it "abides by E.U. laws, including the Digital Services Act" and that its moderation is "within industry standards and constantly improving." It also argued that it's "absurd to claim that a platform or its owner are responsible for abuse of that platform." Update
+French President Emmanuel Macron said Durov's arrest was not a political decision and that the government was not involved in the operation. He further said the arrest took place as part of a judicial investigation.
+Prosecutors said on Monday that the detention was in connection with an investigation opened on July 8, 2024, into criminal activity on the platform and a lack of cooperation with law enforcement. An unnamed person is being looked into for being complicit in distributing child pornography and narcotics via Telegram.
+The development has sparked debate over free speech and censorship, while also putting its encryption practices under the spotlight again.
+"Telegram by contrast does not end-to-end encrypt conversations by default," Matthew Green, a security researcher and an associate professor of computer science at Johns Hopkins University, said, calling out the company's "pretty intense campaign to malign Signal as insecure."
+"Unless you manually start an encrypted 'Secret Chat,' all of your data is visible on the Telegram server. Given who uses Telegram, this server is probably a magnet for intelligence services."
+"Think about confidentiality matters. Think about where Telegram operates its servers and what government jurisdictions they work in. Decide if you care about this. Just don’t shoot your foot off because you're uninformed." 
+
+
+Found this article interesting? Follow us on Twitter  and LinkedIn to read more exclusive content we post.

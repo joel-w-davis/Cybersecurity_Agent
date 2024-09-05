@@ -1,0 +1,22 @@
+Title: SANS Institute Unveils Critical Infrastructure Strategy Guide for 2024: A Call to Action for Securing ICS/OT Environments
+Date: No date found
+URL: https://thehackernews.com/2024/08/sans-institute-unveils-critical.html
+
+Content:
+A comprehensive guide authored by Dean Parsons, SANS Certified Instructor and CEO / Principal Consultant of ICS Defense Force, emphasizes the growing need for specialized ICS security measures in the face of rising cyber threats.
+With a staggering 50% increase in ransomware attacks targeting industrial control systems (ICS) in 2023, the SANS Institute is taking decisive action by announcing the release of its essential new strategy guide, "ICS Is the Business: Why Securing ICS/OT Environments Is Business-Critical in 2024." Authored by Dean Parsons, CEO of ICS Defense Force and a SANS Certified Instructor, this guide offers a comprehensive analysis of the rapidly evolving threat landscape and provides critical steps that organizations must take to safeguard their operations and ensure public safety. As cyber threats grow in both frequency and sophistication, this guide is an indispensable resource for securing the vital systems that underpin our world.
+Key Insights from the Strategy Guide:
+
+The Growing Threat Landscape: The guide details the alarming rise in cyber-attacks against ICS/OT environments, with a portion being targeting critical infrastructure sectors. "The reality is that these attacks are no longer a question of if, but when," says Parsons. "Organizations in the ICS space must recognize that their ICS is the business."
+High-Impact, Low-Frequency Attacks: The guide highlights the dangers of high-impact, low-frequency (HILF) attacks that can potentially cause catastrophic consequences, such as widespread power outages and environmental disasters. "These are the attacks that keep security CSOs, VP of Engineering and others responsible for ICS cyber defense, safety, and risk management, up at night," Parsons notes. "A coordinated targeted control system attack may have cascading effects across industries, regions, or nations."
+Five ICS Cybersecurity Critical Controls: Parsons outlines the SANS five critical controls necessary for defending ICS/OT environments, including ICS-specific incident response and defensible control system network architecture. These controls are not just technical recommendations but also business imperatives supporting operational continuity and safety.
+AI as an Augmentation Tool: The guide also discusses the role of artificial intelligence (AI) in enhancing ICS security while cautioning against over-reliance on AI at the expense of human expertise. "AI can be a powerful tool, but it cannot replace the specialized knowledge and decision-making capabilities of trained ICS/OT 
+
+"We cannot afford to be complacent," Parsons warns. "This guide is a must-read for anyone responsible for protecting critical infrastructure – CSOs, VP Engineering, engineering safety, and risk mangers. The steps outlined here are essential for ensuring that our industrial systems continue to operate safely and reliably."
+SANS Institute encourages all organizations with ICS/OT environments to download the strategy guide and begin implementing the recommended security controls. Protecting our critical infrastructure is not just a technical challenge but a business-critical imperative that requires immediate action.
+To download the full strategy guide, visit https://www.sans.org/mlp/ics-business-guide-2024/. 
+Interested in diving deeper into the world of Industrial Control Systems (ICS) Security? Check out the courses running at SANS Cyber Defense Initiative 2024.
+
+
+
+Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on Twitter  and LinkedIn to read more exclusive content we post.

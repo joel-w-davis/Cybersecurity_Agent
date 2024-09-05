@@ -1,0 +1,31 @@
+Title: macOS Version of HZ RAT Backdoor Targets Chinese Messaging App Users
+Date: No date found
+URL: https://thehackernews.com/2024/08/macos-version-of-hz-rat-backdoor.html
+
+Content:
+Users of Chinese instant messaging apps like DingTalk and WeChat are the target of an Apple macOS version of a backdoor named HZ RAT.
+The artifacts "almost exactly replicate the functionality of the Windows version of the backdoor and differ only in the payload, which is received in the form of shell scripts from the attackers' server," Kaspersky researcher Sergey Puzan said.
+HZ RAT was first documented by German cybersecurity company DCSO in November 2022, with the malware distributed via self-extracting zip archives or malicious RTF documents presumably built using the Royal Road RTF weaponizer.
+
+The attack chains involving RTF documents are engineered to deploy the Windows version of the malware that's executed on the compromised host by exploiting a years-old Microsoft Office flaw in the Equation Editor (CVE-2017-11882).
+The second distribution method, on the other hand, masquerades as an installer for legitimate software such as OpenVPN, PuTTYgen, or EasyConnect that, in addition to actually installing the lure program, also executes a Visual Basic Script (VBS) responsible for launching the RAT.
+The capabilities of HZ RAT are fairly simple in that it connects to a command-and-control (C2) server to receive further instructions. This includes executing PowerShell commands and scripts, writing arbitrary files to the system, uploading files to the server, and sending heartbeat information.
+Given the limited functionality of the tool, it's suspected that the malware is primarily used for credential harvesting and system reconnaissance activities.
+Evidence shows that the first iterations of the malware have been detected in the wild as far back as June 2020. The campaign itself, per DCSO, is believed to be active since at least October 2020.
+
+The latest sample uncovered by Kaspersky, uploaded to VirusTotal in July 2023, impersonates OpenVPN Connect ("OpenVPNConnect.pkg"), which, upon starting, establishes contact with a C2 server specified in the backdoor to run four basic commands that are similar to that of its Windows counterpart -
+
+Execute shell commands (e.g., system information, local IP address, list of installed apps, data from DingTalk, Google Password Manager, and WeChat)
+Write a file to disk
+Send a file to the C2 server
+Check a victim's availability 
+
+"The malware attempts to obtain the victim's WeChatID, email, and phone number from WeChat," Puzan said. "As for DingTalk, attackers are interested in more detailed victim data: Name of the organization and department where the user works, username, corporate email address, [and] phone number."
+
+Further analysis of the attack infrastructure has revealed that almost all of the C2 servers are located in China barring two, which are based in the U.S. and the Netherlands.
+On top of that, the ZIP archive containing the macOS installation package ("OpenVPNConnect.zip") is said to have been previously downloaded from a domain belonging to a Chinese video game developer named miHoYo, which is known for Genshin Impact and Honkai.
+It's currently not clear how the file was uploaded to the domain in question ("vpn.mihoyo[.]com") and if the server was compromised at some point in the past. It's also undetermined how widespread the campaign is, but the fact that the backdoor is being put to use even after all these years points to some degree of success.
+"The macOS version of HZ Rat we found shows that the threat actors behind the previous attacks are still active," Puzan said. "During the investigation, the malware was only collecting user data, but it could later be used to move laterally across the victim's network, as suggested by the presence of private IP addresses in some samples." 
+
+
+Found this article interesting? Follow us on Twitter  and LinkedIn to read more exclusive content we post.

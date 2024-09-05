@@ -1,0 +1,16 @@
+Title: Meta Exposes Iranian Hacker Group Targeting Global Political Figures on WhatsApp
+Date: No date found
+URL: https://thehackernews.com/2024/08/meta-exposes-iranian-hacker-group.html
+
+Content:
+Meta Platforms on Friday became the latest company after Microsoft, Google, and OpenAI to expose the activities of an Iranian state-sponsored threat actor, who it said used a set of WhatsApp accounts that attempted to target individuals in Israel, Palestine, Iran, the U.K., and the U.S.
+The activity cluster, which originated from Iran, "appeared to have focused on political and diplomatic officials, and other public figures, including some associated with administrations of President Biden and former President Trump," Meta said.
+The social media giant attributed it to a nation-state actor tracked as APT42, which is also known as Charming Kitten, Damselfly, Mint Sandstorm (formerly Phosphorus), TA453, and Yellow Garuda. It's assessed to be linked to Iran's Islamic Revolutionary Guard Corps (IRGC).
+
+The adversarial collective is well-known for its use of sophisticated social engineering lures to spear-phish targets of interest with malware and steal their credentials. Earlier this week, Proofpoint revealed that the threat actor targeted a prominent Jewish figure to infect their machine with malware called AnvilEcho.
+Meta said the "small cluster" of WhatsApp accounts masqueraded as technical support for AOL, Google, Yahoo, and Microsoft, although the efforts are believed to be unsuccessful. The accounts have since been blocked.
+"We have not seen evidence that their accounts were compromised," the parent company of Facebook, Instagram, and WhatsApp said. "We have encouraged those who reported to us to take steps to ensure their online accounts are safe across the internet."
+The development comes as the U.S. government formally accused Iran of attempting to undermine U.S. elections, stoke divisive opinion among the American public, and erode confidence in the electoral process by amplifying propaganda and gathering political intelligence. 
+
+
+Found this article interesting? Follow us on Twitter  and LinkedIn to read more exclusive content we post.

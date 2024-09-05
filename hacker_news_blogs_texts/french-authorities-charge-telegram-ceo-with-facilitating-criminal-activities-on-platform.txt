@@ -1,0 +1,28 @@
+Title: French Authorities Charge Telegram CEO with Facilitating Criminal Activities on Platform
+Date: No date found
+URL: https://thehackernews.com/2024/08/french-authorities-charge-telegram-ceo.html
+
+Content:
+French prosecutors on Wednesday formally charged Telegram CEO Pavel Durov with facilitating a litany of criminal activity on the popular messaging platform and placed him under formal investigation following his arrest Saturday.
+Russian-born Durov, who is also a French citizen, has been charged with being complicit in the spread of child sexual abuse material (CSAM) as well as enabling organized crime, illicit transactions, drug trafficking, and fraud.
+Durov has also been charged with a "refusal to communicate, at the request of competent authorities, information or documents necessary for carrying out and operating interceptions allowed by law," according to an English translation of the press release.
+The 39-year-old was detained at Le Bourget airport north of Paris at 8 p.m. local time on Saturday after disembarking from a private jet. To avoid pretrial detention, Durov has been ordered to pay a €5 million bail, but he is barred from leaving the country and must report to the authorities twice a week.
+
+The arrest is in connection with a judicial investigation into an unnamed person that was opened in France on July 8, 2024, primarily driven by Telegram's lax moderation policies that have allowed extremist and malicious activity to thrive on the platform. A preliminary probe is said to have commenced in February 2024.
+"The almost total lack of response from Telegram to judicial requisitions was brought to the attention of the cybercrime fighting section (J3) of JUNALCO (National Jurisdiction for the Fight against Organized Crime, within the Paris prosecutor's office), in particular by OFMIN (National Office for Minors)," Paris prosecutor Laure Beccuau said.
+"When consulted, other French investigative services and public prosecutors as well as various partners within Eurojust, particularly Belgian ones, shared the same observation. This is what led JUNALCO to open an investigation into the possible criminal liability of the managers of this messaging service in the commission of these offenses."
+Other charges against Durov include -
+
+Supply of cryptographic services designed to ensure confidentiality without a declaration of conformity
+Supply and import of a cryptographic means that does not exclusively ensure authentication or integrity control functions without prior declaration
+
+The development marks one of the rare instances where a company's top executive has been held liable for what users' post on a major platform that has more than 950 million monthly active users. Durove was previously the CEO of the Russian social media platform Vkontakte which he had founded in 2006. Telegram was subsequently launched in 2013.
+
+Following Durov's arrest, Telegram said in a statement on X that he has "nothing to hide," adding "it is absurd to claim that a platform or its owner are responsible for abuse of that platform." The company also claims it regularly publishes reports of thousands of groups and channels related to child abuse being banned on the messaging service.
+It's also worth noting that the site's terms of service specifically state that it does not process any requests related to illegal content shared on Telegram chats and group chats.
+Politico has since reported that French authorities issued arrest warrants for Telegram CEO Pavel Durov and his co-founder brother Nikolai in March 2024. French President Emmanuel Macron said Monday that Durov's arrest wasn't a political decision but part of an independent investigation.
+The Wall Street Journal further revealed Wednesday that Durov's iPhone was hacked by French spies in a joint exercise with the United Arab Emirates in 2017 as part of a previously unknown operation codenamed Purple Music, citing people familiar with the matter.
+"French security officials were acutely concerned about Islamic State's use of Telegram to recruit operatives and plan attacks," the report said.
+
+
+Found this article interesting? Follow us on Twitter  and LinkedIn to read more exclusive content we post.

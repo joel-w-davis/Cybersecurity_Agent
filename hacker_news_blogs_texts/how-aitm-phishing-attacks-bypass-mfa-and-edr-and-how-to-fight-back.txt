@@ -1,0 +1,98 @@
+Title: How AitM Phishing Attacks Bypass MFA and EDR—and How to Fight Back
+Date: No date found
+URL: https://thehackernews.com/2024/08/how-to-stop-aitm-phishing-attack.html
+
+Content:
+Attackers are increasingly using new phishing toolkits (open-source, commercial, and criminal) to execute adversary-in-the-middle (AitM) attacks.
+AitM enables attackers to not just harvest credentials but steal live sessions, allowing them to bypass traditional phishing prevention controls such as MFA, EDR, and email content filtering.
+In this article, we're going to look at what AitM phishing is, how it works, and what organizations need to be able to detect and block these attacks effectively.
+What is AitM phishing?
+AitM phishing is a technique that uses dedicated tooling to act as a proxy between the target and a legitimate login portal for an application. 
+As it's a proxy to the real application, the page will appear exactly as the user expects, because they are logging into the legitimate site – just taking a detour via the attacker's device. For example, if accessing their webmail, the user will see all their real emails; if accessing their cloud file store then all their real files will be present, etc. 
+This gives AitM an increased sense of authenticity and makes the compromise less obvious to the user. However, because the attacker is sitting in the middle of this connection, they are able to observe all interactions and also take control of the authenticated session to gain control of the user account. 
+While this access is technically temporary (since the attacker is unable to reauthenticate if prompted) in practice authenticated sessions can often last as long as 30 days or more if kept active. Additionally, there are a wide range of persistence techniques that allow an attacker to maintain some level of access to the user account and/or targeted application indefinitely. 
+How do AitM toolkits work?
+Let's consider the two main techniques that are used to implement AitM phishing: Reverse web proxies (classic AitM) and Browser-in-the-Middle (BitM) techniques. There are two main variants of AitM toolkits:
+Reverse web proxy: 
+This is arguably the most scalable and reliable approach from an attacker's point of view. When a victim visits a malicious domain, HTTP requests are passed between the victim's browser and the real site via the malicious site. When the malicious site receives an HTTP request, it forwards this request to the legitimate site it is impersonating, receives the response, and then forwards that on to the victim. 
+Open-source tools that demonstrate this method include Modlishka, Muraena, and the ever-popular Evilginx. In the criminal world, there are also similar private toolsets available that have been used in many breaches in the past.
+BitM: 
+Rather than act as a reverse web proxy, this technique tricks a target into directly controlling the attacker's own browser remotely using desktop screen sharing and control approaches like VNC and RDP. This enables the attacker to harvest not just the username and password, but all other associated secrets and tokens that go along with the login. 
+In this case, the victim isn't interacting with a fake website clone or proxy. They are literally remotely controlling the attacker's browser to log in to the legitimate application without realizing. This is the virtual equivalent of an attacker handing their laptop to their victim, asking them to login to Okta for them, and then taking their laptop back afterwards. Thanks very much!
+Practically speaking, the most common approach for implementing this technique is using the open-source project noVNC, which is a JavaScript-based VNC client that allows VNC to be used in the browser. Probably the most well-known example of an offensive tool implementing this is EvilnoVNC, which spins up Docker instances of VNC and proxies access to them, while also logging keystrokes and cookies to facilitate account compromise.
+If you want to know more about SaaS-native attack techniques, check out this blog post.
+Phishing is nothing new – so what's changed? 
+Phishing is one of the oldest cyber security challenges facing organizations, with some description of identity/phishing attacks having been the top attack vector since at least 2013. But, both the capabilities of phishing tools, and their role in how today's attacks play out, have changed significantly. 
+As we've already mentioned, AitM toolkits are primarily a way for attackers to circumvent controls like MFA to take over workforce identities – granting access to a vast spectrum of business apps and services accessed over the internet. 
+The reality is that we're now in a new era of cyber security, where identity is the new perimeter. This means that identities are the lowest-hanging fruit for attackers to pick at when looking for a way into a would-be victim. 
+The digital perimeter for organizations has shifted as business IT has evolved away from centralized networks to web-based services and applications.
+The fact that attackers are investing in the development and commercialization of advanced phishing toolkits is a strong indicator of the opportunity that identity attacks present. This is supported by the data, as:
+
+80% of attacks today involve identity and compromised credentials (CrowdStrike).
+79% of web application compromises were the result of breached credentials (Verizon). 
+75% of attacks in 2023 were malware-free and "cloud conscious" attacks increased by 110% (CrowdStrike).
+
+But, we only really need to look at what recent high-profile breaches show us about how lucrative it can be for attackers to find ways to take over workforce identities in order to access web-based business applications – with the recent Snowflake attacks, going down as one of the biggest breaches in history, being the elephant in the room. 
+Attackers now have a lot of opportunities to cause significant damage for much less effort than before. For example, if the goal is to compromise an app like Snowflake and dump the data from it, the Kill Chain is way shorter than a traditional network-based attack. And with the increasing popularity of SSO platforms like Okta, an identity compromise can quickly spread across apps and accounts, increasing the potential blast radius. This means there's little margin for error when it comes to identity attacks like AitM phishing – and you can't rely on your endpoint and network controls to catch them later. 
+In this new world, attacks don't even have to touch the old perimeters, because all the data and functionality they could want exists on the public internet. As a result, we're seeing more and more attacks targeting SaaS apps, with the entire attack chain being concluded outside customer networks, not touching any traditional endpoints or networks.
+AitM phishing toolkits are effectively the identity equivalent of a C2 framework. In the world of endpoint and network attacks, toolsets like Metasploit and Cobalt Strike became increasingly focused on post-exploitation and automation to enable much more sophisticated compromises. We're already seeing this with things like Evilginx integrating with GoPhish for phishing campaign automation and orchestration.
+Attackers are bypassing existing controls with ease
+Existing phishing prevention solutions have tried to solve the problem by protecting the email inbox, a common (but not the only) attack vector, and blocking lists of known-bad domains. 
+The fact that phishing has remained a problem for so long is evidence enough that these methods don't work (and honestly, they never have). 
+The primary anti-phishing protection is blocking known-bad URLs, IPs, and domain names. The main limitation here is that for defenders to know that something is bad, it needs to be reported first. When are things reported? Typically only after being used in an attack – so unfortunately, someone always gets hurt, and defenders are always one step behind the attackers. 
+And even if they are reported, it's trivial for attackers to obfuscate or change these components: 
+
+You could look for known-bad URLs in emails, but these change for every phishing campaign. In modern attacks, every target can receive a unique email and link. Using a URL shortener, or sharing a link to a document that contains a further malicious URL can bypass this. It's equivalent to a malware hash – trivial to change, and therefore not a great thing to pin your detections on. 
+You could look at which IP address the user connects to, but these days it's very simple for attackers to add a new IP to their cloud-hosted server. 
+If a domain is flagged as known-bad, the attacker only has to register a new domain, or compromise a WordPress server on an already trusted domain. Both of these things are happening on a massive scale as attackers pre-plan for the fact that their domains will be burned at some point, bulk-buying domains years in advance to ensure a continual pipeline of high rep domains. Attackers are more than happy to spend $10-$20 per new domain in the grand scheme of the potential proceeds of crime.
+The attacker's website doesn't need to send each visitor to the same website. It can change dynamically based on where the visitor is coming from – meaning that detection tools which resolve where links go to analyze them may not be served the phishing page. 
+
+For example, recent research looking at the NakedPages phishing kit found 9 separate steps that they attacker used to obfuscate the phishing site and mask its malicious activity:
+
+Using Cloudflare Workers to give the site a legit domain.
+Using Cloudflare Turnstile to stop bots from accessing the site.
+Requiring certain URL parameters and headers for the HTTP(S) request to work.
+Requiring JavaScript execution to obfuscate from static analysis tools.
+Redirecting to legit domains if the conditions aren't met.
+Masking the HTTP referer header to perform the redirection anonymously.
+Redirecting to a pool of URLs to keep malicious links active.
+Breaking easy login page signatures. 
+Only triggering for Microsoft work accounts, not personal ones.
+
+So what? Well, it's clear that a different approach is required if AitM phishing sites are going to be reliably detected before a victim can be claimed. 
+Building better detections using the Pyramid of Pain
+So, how do you build controls that can detect and block a phishing site the first time it's used? 
+The answer is to find indicators that are harder for attackers to change. Blue teamers have used the concept of the Pyramid of Pain to guide them toward such detections for over a decade. 
+Original Pyramid of Pain model, created by David Bianco.
+In order to climb the Pyramid toward the apex, you need to find ways to detect increasingly generic parts of an attack technique. So you want to avoid things like what a specific malware's code looks like, or where it connects back to. But what the malware does, or what happens when it runs, is more generic, and therefore more interesting to defenders. 
+The shift from static code signatures and fuzzy hashes to dynamic analysis of what code does on a live system is at the heart of why EDR killed antivirus a decade ago. It proved at-scale the value of moving detections up the pyramid.
+The best place to start is to look at what needs to happen for a user to be successfully phished:
+
+Stage 1: The victim must be lured to visit a website.
+Stage 2: The website must somehow trick or convince the user that it's legitimate and trustworthy, for example by mimicking a legitimate site.
+Stage 3: The user must enter their actual credentials into that website.
+
+We've already established that detections based on the first two stages are easy for attackers to get around by changing those indicators. 
+For a phishing attack to succeed, the victim must enter their actual credentials into the webpage. So, if you can stop the user entering their real password, there's no attack. 
+But how can you stop a user from entering their password into a phishing site? 
+Leveraging browser-based security controls
+To be able to build the types of control that can hit attackers where it hurts, a new surface for detection and control enforcement is needed – the equivalent of EDR for identities. 
+There are clear reasons why the browser is the prime candidate for this. In many ways, the browser is the new OS and is the place where modern work happens – the gateway to the web-based apps and services that employees use every day, and business activity relies on. 
+From a technical perspective, the browser presents a better alternative to other sources of identity telemetry: 
+The browser presents a significant advantage over other sources of identity attack data.
+In the browser, you're able to dynamically interact with the DOM or the rendered web application, including its JS code. This makes it easy to find, for example, input fields for usernames and passwords. You can see what information the user is inputting and where, without needing to figure out how the data is encoded and sent back to the app. These are fairly generic fields that can be identified across your suite of apps without needing complex custom code. Ideal visibility to build detections around the user behavior of entering a password. 
+The browser also has the added benefit of being a natural enforcement point. You can collect and analyze data dynamically, and produce an immediate response – rather than taking info away, analyzing it, and coming back with a detection minutes or hours later (and potentially prompting a manual response).
+So, it's very much possible to be able to intercept users at the point of impact (i.e. the stage when a password is entered into an input field on a phishing site), to stop the attack before it happens. 
+Bringing detection and response capabilities into the browser to stop identity attacks is therefore a huge advantage to security teams. There are clear parallels with the emergence of EDR – which came about because existing endpoint log sources and controls were not sufficient. Today, we wouldn't dream of trying to detect and respond to endpoint-based attacks without EDR – it's time to start thinking about identity attacks and the browser in the same way.
+To read more about how browser-based controls can be used to stop identity attacks, check out this blog post.
+AitM and BitM attack and detection demo
+Check out the video below to see a demonstration of the Evilginx and EvilNoVNC phishing toolkits in action, as well as how browser-based security controls can be used to detect and block them before the phishing attack is completed. 
+
+Find out more
+If you want to learn more about identity attacks and how to stop them, check out Push Security – you can try out their browser-based agent for free! 
+
+
+
+
+
+Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on Twitter  and LinkedIn to read more exclusive content we post.
