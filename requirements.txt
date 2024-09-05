@@ -4,7 +4,7 @@ openai==0.27.7
 langchain==0.1.1
 pinecone-client==3.0.0
 python-dotenv==1.0.0
-tiktoken==0.4.0
-streamlit==1.18.1
 tiktoken==0.3.3  # Ensure this version has a pre-built wheel
+streamlit==1.18.1
+
 
