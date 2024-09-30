@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Set the URL of the Flask API
-API_URL = "https://cybersecurity-agent.vercel.app/"
+API_URL = "http://127.0.0.1:5000/ask"
 
 
 # Title of the Streamlit app

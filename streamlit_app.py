@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 import os
 import time
 from uuid import uuid4
@@ -26,9 +26,9 @@ PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
 pc = Pinecone(api_key=PINECONE_API_KEY)
 
 #render template for start up
-@app.route('/')
-def index():
-    return render_template('index.html')
+#@app.route('/')
+#def index():
+#    return render_template('index.html')
 
 # Index setup
 index_name = "cyber-bot"
@@ -81,5 +81,5 @@ def ask_question():
 
 # Start the Flask application
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(debug=True)
 
